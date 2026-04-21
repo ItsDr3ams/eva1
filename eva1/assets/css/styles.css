@@ -1,0 +1,212 @@
+/* =========================================
+   IMPORTACIÓN DE FUENTES (GOOGLE FONTS)
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* =========================================
+   CONFIGURACIÓN Y COLORES
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Movimiento fluido al navegar */
+}
+
+body {
+    background-color: #0a0806; /* Negro cálido */
+    color: #e8e6e3; /* Blanco hueso */
+    font-family: 'Lora', serif; /* Fuente elegante y legible */
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Títulos con estilo eclesiástico */
+h1, h2 {
+    font-family: 'Cinzel', serif;
+    color: #d4af37; /* Amarillo dorado oscuro */
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+p {
+    /* Un tamaño de lectura cómodo y adaptable */
+    font-size: clamp(16px, 1.2vw, 18px); 
+}
+
+/* =========================================
+   NAVEGACIÓN (STICKY)
+   ========================================= */
+nav {
+    background-color: rgba(28, 20, 13, 0.95); /* Café muy oscuro transparente */
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    z-index: 1000;
+    border-bottom: 1px solid #4a3821;
+}
+
+nav a {
+    color: #e8e6e3;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   SECCIONES (CON GRAN ESPACIADO)
+   ========================================= */
+header {
+    background-color: #1c140d; /* Café oscuro */
+    /* Usamos 'vh' para que el alto del inicio dependa de la pantalla */
+    padding: 15vh 20px; 
+    text-align: center;
+    border-bottom: 2px solid #d4af37;
+    
+    /* Centramos el contenido perfectamente al medio */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    /* Magia pura: mínimo 32px, ideal 5% del ancho de pantalla, máximo 65px */
+    font-size: clamp(32px, 5vw, 65px);
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+header p {
+    /* Subtítulo adaptable: mínimo 18px, ideal 2% de la pantalla, máximo 24px */
+    font-size: clamp(18px, 2vw, 24px);
+    color: #a8a096; /* Gris cálido para diferenciarlo del blanco */
+    font-style: italic; /* Letra cursiva para darle elegancia */
+    letter-spacing: 1px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section, footer {
+    background-color: #1c140d;
+    padding: 80px 40px;
+    margin-bottom: 70vh; 
+    border-radius: 12px;
+    scroll-margin-top: 100px; 
+    
+    text-align: center; 
+}
+
+/* =========================================
+   TÍTULOS DE LAS OTRAS SECCIONES
+   ========================================= */
+section h2, footer h2 {
+    /* Los títulos de las secciones serán un poco más pequeños que el principal */
+    font-size: clamp(28px, 3.5vw, 40px);
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   ANIMACIÓN DE ENTRADA
+   ========================================= */
+@keyframes subirRevelar {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.revelar {
+    animation: subirRevelar 1.2s ease-out;
+}
+
+/* =========================================
+   COMPONENTES ADICIONALES
+   ========================================= */
+.boton-dorado {
+    background-color: #d4af37;
+    color: #0a0806;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    display: inline-block;
+    transition: 0.3s;
+}
+ 
+.boton-dorado:hover {
+    background-color: #997a00;
+    transform: scale(1.05);
+}
+
+#equipo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+/* =========================================
+   CONTACTO (USANDO FIGURE PARA SEMÁNTICA)
+   ========================================= */
+figure.galeria-contacto {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+    justify-content: center; /* Asegura que las fotos estén centradas */
+}
+
+figure.galeria-contacto img {
+    flex: 1;
+    width: 100%;
+    max-width: calc(50% - 10px);
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #4a3821;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 768px) {
+    figure.galeria-contacto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    figure.galeria-contacto img {
+        max-width: 100%;
+        height: 250px;
+    }
+}
