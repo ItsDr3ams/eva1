@@ -1,39 +1,220 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0a0806;
+    color: #e8e6e3; 
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+h1, h2 {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
     text-align: center;
-    padding: 3rem 1rem;
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #ccc;
+    letter-spacing: 2px;
+}
+p {
+    font-size: 18px; 
 }
 
 nav {
-    text-align: center;
-    padding: 1rem;
-    background-color: #eee;
-    border-bottom: 1px solid #ccc;
+    background-color: #1c140d;
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    z-index: 1000;
+    border-bottom: 1px solid #4a3821;
 }
 
 nav a {
+    color: #e8e6e3;
     text-decoration: none;
-    color: #333;
-    margin: 0 1rem;
+    font-family: 'Cinzel', serif;
     font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+    transform: translateY(-2px);
+}
+
+header {
+    background-color: #1c140d; 
+    padding: 15vh 20px; 
+    text-align: center;
+    border-bottom: 2px solid #d4af37;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 64px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+header p {
+    font-size: 24px;
+    color: #a8a096;
+    font-style: italic;
+    letter-spacing: 1px;
 }
 
 main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-section {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px dashed #ccc;
+section, footer {
+    background-color: #1c140d;
+    padding: 80px 40px;
+    margin-bottom: 70vh; 
+    border-radius: 12px;
+    scroll-margin-top: 100px; 
+    
+    text-align: center; 
+}
+
+section h2, footer h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+@keyframes subirRevelar {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.revelar {
+    animation: subirRevelar 1.2s ease-out;
+}
+
+
+#equipo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+figure.galeria-contacto {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+    justify-content: center; 
+}
+
+figure.galeria-contacto img {
+    flex: 1;
+    width: 100%;
+    max-width: calc(50% - 10px);
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #4a3821;
+}
+
+.acordeon-horarios {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+details {
+    background-color: #1c140d;
+    border: 1px solid #4a3821;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+summary {
+    padding: 18px 20px;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #d4af37; 
+    background-color: #0a0806; 
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: '▼';
+    font-size: 14px;
+    color: #e8e6e3;
+    transition: transform 0.3s ease;
+}
+
+summary:hover {
+    background-color: #1c140d;
+}
+
+details[open] summary::after {
+    transform: rotate(180deg);
+    color: #d4af37;
+}
+
+.contenido-dia {
+    padding: 20px;
+    background-color: #1c140d;
+    color: #e8e6e3;
+    border-top: 1px solid #4a3821; 
+    animation: aparecerContenido 0.4s ease-out;
+}
+
+.contenido-dia p {
+    margin-bottom: 10px;
+}
+
+@keyframes aparecerContenido {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mini-logo {
+    width: 60px;
+    margin-top: 20px;
 }
