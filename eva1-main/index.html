@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Iglesia Como en el Cielo en Copiapó. Un lugar para crecer en fe. Conoce nuestros horarios y equipo.">
+    <title>Iglesia Como en el Cielo | Copiapó</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+ <button id="theme-toggle" aria-label="Cambiar tema">
+    🌙 Modo Oscuro
+ </button>
+    <header class="header" data-js="header">
+        <div class="header__container">
+            <div class="header__brand">
+                <h1 class="header__title">Como en el Cielo</h1>
+                <p class="header__subtitle">Un lugar para crecer en fe</p>
+            </div>
+
+            <nav class="nav" aria-label="Navegación principal">
+                <ul class="nav__list" data-js="nav-menu">
+                    <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="#nosotros" class="nav__link">Nosotros</a></li>
+                    <li class="nav__item"><a href="#equipo" class="nav__link">Equipo</a></li>
+                    <li class="nav__item"><a href="#horarios" class="nav__link">Horarios</a></li>
+                    <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <section id="inicio" class="hero section">
+            <div class="hero__content">
+                <h2 class="hero__title">¡Bienvenido a tu casa!</h2>
+                <p class="hero__text">Te invitamos a ser parte de nuestra familia espiritual.</p>
+                <a href="#horarios" class="btn btn--primary">Conoce nuestras actividades</a>
+            </div>
+        </section>
+
+        <section id="nosotros" class="about section">
+            <div class="section__container">
+                <h2 class="section__title">Sobre Nosotros</h2>
+                <p class="about__text">
+                    Somos una iglesia dedicada a compartir el mensaje de la buena noticia del Señor, 
+                    sirviendo a nuestra comunidad en Copiapó y creciendo juntos en la palabra.
+                </p>
+            </div>
+        </section>
+
+        <section id="equipo" class="team section">
+            <div class="section__container">
+                <h2 class="section__title">Nuestro Equipo</h2>
+                
+                <div class="team__grid">
+                    <article class="card-team">
+                        <img src="assets/img/pastor_elias.png" alt="Pastor Elias Nuñez" class="card-team__img">
+                        <h3 class="card-team__role">Pastor</h3>
+                        <p class="card-team__name">Elias Nuñez</p>
+                    </article>
+
+                    <article class="card-team">
+                        <img src="assets/img/Miguel_dinamarca.png" alt="Miguel Dinamarca, Jóvenes" class="card-team__img">
+                        <h3 class="card-team__role">Encargado Jóvenes</h3>
+                        <p class="card-team__name">Miguel Dinamarca</p>
+                    </article>
+
+                    <article class="card-team">
+                        <img src="assets/img/Miguel_dinamarca.png" alt="Miguel Dinamarca, Sonido" class="card-team__img">
+                        <h3 class="card-team__role">Encargado Sonido</h3>
+                        <p class="card-team__name">Miguel Dinamarca</p>
+                    </article>
+
+                    <article class="card-team">
+                        <img src="assets/img/12225881.png" alt="Jonathan Hermosilla, Tesorería" class="card-team__img">
+                        <h3 class="card-team__role">Encargado Tesorería</h3>
+                        <p class="card-team__name">Jonathan Hermosilla</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="horarios" class="schedule section">
+            <div class="section__container">
+                <h2 class="section__title">Nuestros Horarios</h2>
+                
+                <div class="schedule__list" data-js="schedule-accordion">
+                    <div class="schedule__item">
+                        <h3 class="schedule__day">Lunes</h3>
+                        <p class="schedule__activity"><strong>19:30 hrs</strong> - Reunión de Oración</p>
+                    </div>
+                    <div class="schedule__item">
+                        <h3 class="schedule__day">Martes</h3>
+                        <p class="schedule__activity"><strong>19:30 hrs</strong> - Estudio Bíblico</p>
+                    </div>
+                    <div class="schedule__item schedule__item--highlight">
+                        <h3 class="schedule__day">Domingo</h3>
+                        <p class="schedule__activity"><strong>11:00 hrs</strong> - Servicio General</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contacto" class="footer section">
+        <div class="section__container">
+            <h2 class="section__title section__title--footer">¡Contáctanos!</h2>
+            
+            <figure class="footer__gallery">
+                <img src="assets/img/ubicacion_iglesia.png" alt="Mapa de ubicación Av. Copayapu 4550" class="footer__img">
+                <img src="assets/img/iglesia_fuera.jpg" alt="Fachada principal de la iglesia" class="footer__img">
+            </figure>
+
+            <address class="footer__info">
+                <p><strong>Dirección:</strong> Avda. Copayapu N°4550 Casa 7, Copiapó</p>
+                <p><strong>Teléfono:</strong> <a href="tel:+56950112335" class="footer__link">+56 9 5011 2335</a></p>
+            </address>
+
+            <img src="assets/img/Logo_iglesia.jpeg" alt="Sello oficial de la Iglesia" class="footer__logo">
+            
+            <p class="footer__copyright">&copy; 2026 Iglesia Como en el Cielo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+ <script src="script.js"></script>
+</body>
+</html>
