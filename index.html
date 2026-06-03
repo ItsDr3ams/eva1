@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-tema="claro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Iglesia Como en el Cielo en Copiapó. Un lugar para crecer en fe. Conoce nuestros horarios y equipo.">
+    <meta name="description" content="Iglesia Como en el Cielo en Copiapó.">
     <title>Iglesia Como en el Cielo | Copiapó</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,119 +14,176 @@
 </head>
 <body>
 
-    <header class="header" data-js="header">
-        <div class="header__container">
-            <div class="header__brand">
-                <h1 class="header__title">Como en el Cielo</h1>
-                <p class="header__subtitle">Un lugar para crecer en fe</p>
+    <header class="cabecera">
+        <div class="cabecera__contenedor">
+            <div class="cabecera__marca">
+                <h1 class="cabecera__titulo">Como en el Cielo</h1>
+                <p class="cabecera__subtitulo">Un lugar para crecer en fe</p>
             </div>
 
-            <nav class="nav" aria-label="Navegación principal">
-                <ul class="nav__list" data-js="nav-menu">
-                    <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
-                    <li class="nav__item"><a href="#nosotros" class="nav__link">Nosotros</a></li>
-                    <li class="nav__item"><a href="#equipo" class="nav__link">Equipo</a></li>
-                    <li class="nav__item"><a href="#horarios" class="nav__link">Horarios</a></li>
-                    <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+            <button class="boton-menu-movil" id="btn-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+                <span class="boton-menu-movil__icono">Menú ☰</span>
+            </button>
+
+            <button class="boton-tema" id="btn-tema" aria-label="Cambiar a modo oscuro">
+                🌙
+            </button>
+
+            <nav class="navegacion" id="menu-principal" aria-hidden="true">
+                <ul class="navegacion__lista">
+                    <li class="navegacion__item"><a href="#inicio" class="navegacion__enlace">Inicio</a></li>
+                    <li class="navegacion__item"><a href="#nosotros" class="navegacion__enlace">Nosotros</a></li>
+                    <li class="navegacion__item"><a href="#equipo" class="navegacion__enlace">Equipo</a></li>
+                    <li class="navegacion__item"><a href="#horarios" class="navegacion__enlace">Horarios</a></li>
+                    <li class="navegacion__item"><a href="#contacto" class="navegacion__enlace">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="main-content">
+    <main class="contenido-principal">
 
-        <section id="inicio" class="hero section">
-            <div class="hero__content">
-                <h2 class="hero__title">¡Bienvenido a tu casa!</h2>
-                <p class="hero__text">Te invitamos a ser parte de nuestra familia espiritual.</p>
-                <a href="#horarios" class="btn btn--primary">Conoce nuestras actividades</a>
+        <section id="inicio" class="portada seccion">
+            <div class="portada__contenido">
+                <h2 class="portada__titulo">¡Bienvenido a tu casa!</h2>
+                <p class="portada__texto">Te invitamos a ser parte de nuestra familia espiritual.</p>
+                <a href="#horarios" class="boton boton--principal">Ver Horarios</a>
             </div>
         </section>
 
-        <section id="nosotros" class="about section">
-            <div class="section__container">
-                <h2 class="section__title">Sobre Nosotros</h2>
-                <p class="about__text">
-                    Somos una iglesia dedicada a compartir el mensaje de la buena noticia del Señor, 
-                    sirviendo a nuestra comunidad en Copiapó y creciendo juntos en la palabra.
-                </p>
-            </div>
-        </section>
-
-        <section id="equipo" class="team section">
-            <div class="section__container">
-                <h2 class="section__title">Nuestro Equipo</h2>
-                
-                <div class="team__grid">
-                    <article class="card-team">
-                        <img src="assets/img/pastor_elias.png" alt="Pastor Elias Nuñez" class="card-team__img">
-                        <h3 class="card-team__role">Pastor</h3>
-                        <p class="card-team__name">Elias Nuñez</p>
-                    </article>
-
-                    <article class="card-team">
-                        <img src="assets/img/Miguel_dinamarca.png" alt="Miguel Dinamarca, Jóvenes" class="card-team__img">
-                        <h3 class="card-team__role">Encargado Jóvenes</h3>
-                        <p class="card-team__name">Miguel Dinamarca</p>
-                    </article>
-
-                    <article class="card-team">
-                        <img src="assets/img/Miguel_dinamarca.png" alt="Miguel Dinamarca, Sonido" class="card-team__img">
-                        <h3 class="card-team__role">Encargado Sonido</h3>
-                        <p class="card-team__name">Miguel Dinamarca</p>
-                    </article>
-
-                    <article class="card-team">
-                        <img src="assets/img/12225881.png" alt="Jonathan Hermosilla, Tesorería" class="card-team__img">
-                        <h3 class="card-team__role">Encargado Tesorería</h3>
-                        <p class="card-team__name">Jonathan Hermosilla</p>
-                    </article>
+        <section id="nosotros" class="nosotros seccion">
+            <div class="seccion__contenedor">
+                <div class="nosotros__cuadricula">
+                    <div class="nosotros__contenedor-imagen">
+                        <img src="assets/img/comunidad.jpeg" alt="Comunidad de la Iglesia" class="nosotros__imagen">
+                    </div>
+                    <div class="nosotros__contenido">
+                        <h2 class="seccion__titulo nosotros__titulo">Sobre Nosotros</h2>
+                        <p class="nosotros__texto">
+                            Somos una iglesia dedicada a compartir el mensaje de la buena noticia del Señor, 
+                            sirviendo a nuestra comunidad en Copiapó y creciendo juntos en la palabra.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="horarios" class="schedule section">
-            <div class="section__container">
-                <h2 class="section__title">Nuestros Horarios</h2>
+        <section id="equipo" class="equipo seccion">
+            <div class="seccion__contenedor">
+                <h2 class="seccion__titulo">Nuestro Equipo</h2>
                 
-                <div class="schedule__list" data-js="schedule-accordion">
-                    <div class="schedule__item">
-                        <h3 class="schedule__day">Lunes</h3>
-                        <p class="schedule__activity"><strong>19:30 hrs</strong> - Reunión de Oración</p>
+                <div class="equipo__filtros" id="filtros-equipo">
+                    <button class="boton-filtro activo" data-filtro="todos">Todos</button>
+                    <button class="boton-filtro" data-filtro="pastor">Pastores</button>
+                    <button class="boton-filtro" data-filtro="encargado">Encargados</button>
+                </div>
+
+                <div class="equipo__cuadricula" id="contenedor-equipo">
                     </div>
-                    <div class="schedule__item">
-                        <h3 class="schedule__day">Martes</h3>
-                        <p class="schedule__activity"><strong>19:30 hrs</strong> - Estudio Bíblico</p>
+            </div>
+        </section>
+
+                <div class="horarios__lista">
+                    <div class="horarios__item">
+                        <h3 class="horarios__dia">Lunes</h3>
+                        <p class="horarios__actividad"><strong>19:30 hrs</strong> - Reunión de Oración</p>
+                        <button class="boton-reserva" data-dia="Lunes">Me Anoto</button>
                     </div>
-                    <div class="schedule__item schedule__item--highlight">
-                        <h3 class="schedule__day">Domingo</h3>
-                        <p class="schedule__activity"><strong>11:00 hrs</strong> - Servicio General</p>
+                    
+                    <div class="horarios__item">
+                        <h3 class="horarios__dia">Martes</h3>
+                        <p class="horarios__actividad"><strong>19:30 hrs</strong> - Estudio Bíblico</p>
+                        <button class="boton-reserva" data-dia="Martes">Me Anoto</button>
                     </div>
+
+                    <div class="horarios__item">
+                        <h3 class="horarios__dia">Miércoles</h3>
+                        <p class="horarios__actividad"><strong>19:00 hrs</strong> - Ensayo de Alabanza</p>
+                        <button class="boton-reserva" data-dia="Miércoles">Me Anoto</button>
+                    </div>
+
+                    <div class="horarios__item">
+                        <h3 class="horarios__dia">Jueves</h3>
+                        <p class="horarios__actividad"><strong>19:30 hrs</strong> - Reunión de Liderazgo</p>
+                        <button class="boton-reserva" data-dia="Jueves">Me Anoto</button>
+                    </div>
+
+                    <div class="horarios__item">
+                        <h3 class="horarios__dia">Viernes</h3>
+                        <p class="horarios__actividad"><strong>20:00 hrs</strong> - Reunión de Jóvenes</p>
+                        <button class="boton-reserva" data-dia="Viernes">Me Anoto</button>
+                    </div>
+
+                    <div class="horarios__item">
+                        <h3 class="horarios__dia">Sábado</h3>
+                        <p class="horarios__actividad"><strong>16:00 hrs</strong> - Trabajo Comunitario</p>
+                        <button class="boton-reserva" data-dia="Sábado">Me Anoto</button>
+                    </div>
+
+                    <div class="horarios__item horarios__item--destacado">
+                        <h3 class="horarios__dia">Domingo</h3>
+                        <p class="horarios__actividad"><strong>11:00 hrs</strong> - Servicio General</p>
+                        <button class="boton-reserva" data-dia="Domingo">Me Anoto</button>
+                    </div>
+                </div>
+
+                <div class="panel-reserva" id="panel-resumen">
+                    <h3>Mis Asistencias Confirmadas:</h3>
+                    <ul id="lista-reservas"></ul>
+                    <button id="btn-limpiar-reservas" class="boton boton--peligro">Limpiar</button>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer id="contacto" class="footer section">
-        <div class="section__container">
-            <h2 class="section__title section__title--footer">¡Contáctanos!</h2>
+    <footer id="contacto" class="pie-pagina seccion">
+        <div class="seccion__contenedor">
+            <h2 class="seccion__titulo seccion__titulo--pie">¡Contáctanos!</h2>
             
-            <figure class="footer__gallery">
-                <img src="assets/img/ubicacion_iglesia.png" alt="Mapa de ubicación Av. Copayapu 4550" class="footer__img">
-                <img src="assets/img/iglesia_fuera.jpg" alt="Fachada principal de la iglesia" class="footer__img">
-            </figure>
+            <div class="pie-pagina__contenido">
+                
+                <form id="form-contacto" class="formulario-contacto" novalidate>
+                    <div class="grupo-formulario">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" required minlength="3">
+                        <span class="mensaje-error" id="error-nombre"></span>
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="correo">Correo Electrónico:</label>
+                        <input type="email" id="correo" name="correo" required maxlength="20">
+                        <span class="mensaje-error" id="error-correo"></span>
+                    </div>
 
-            <address class="footer__info">
-                <p><strong>Dirección:</strong> Avda. Copayapu N°4550 Casa 7, Copiapó</p>
-                <p><strong>Teléfono:</strong> <a href="tel:+56950112335" class="footer__link">+56 9 5011 2335</a></p>
-            </address>
+                    <div class="grupo-formulario">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required minlength="10"></textarea>
+                        <span class="mensaje-error" id="error-mensaje"></span>
+                    </div>
 
-            <img src="assets/img/Logo_iglesia.jpeg" alt="Sello oficial de la Iglesia" class="footer__logo">
-            
-            <p class="footer__copyright">&copy; 2026 Iglesia Como en el Cielo. Todos los derechos reservados.</p>
+                    <button type="submit" class="boton boton--principal" id="btn-enviar">Enviar Mensaje</button>
+                    <div id="mensaje-exito" class="mensaje-exito"></div>
+                </form>
+
+                <figure class="pie-pagina__galeria">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Avda.+Copayapu+4550,+Copiapo,+Chile" target="_blank" rel="noopener noreferrer" class="enlace-mapa" title="Ver ubicación en Google Maps">
+                        <img src="assets/img/ubicacion_iglesia.png" alt="Mapa de ubicación" class="pie-pagina__imagen imagen-mapa">
+                    </a>
+                    <img src="assets/img/iglesia_fuera.jpg" alt="Fachada principal de la iglesia" class="pie-pagina__imagen">
+                </figure>
+
+                <address class="pie-pagina__informacion">
+                    <p><strong>Dirección:</strong> Avda. Copayapu N°4550 Casa 7, Copiapó</p>
+                    <p><strong>Teléfono:</strong> <a href="tel:+56950112335" class="pie-pagina__enlace">+56 9 5011 2335</a></p>
+                </address>
+
+            </div>
+
+            <img src="assets/img/Logo_iglesia.jpeg" alt="Sello oficial de la Iglesia" class="pie-pagina__logo">
         </div>
     </footer>
 
+    <script src="assets/js/script.js" defer></script>
 </body>
 </html>
