@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. VARIABLES DE SISTEMA Y TEMAS (CLARO / OSCURO)
-   ========================================================================== */
+/* VARIABLES DE SISTEMA Y TEMAS */
 :root {
     --color-primario: #d4af37;
     --color-primario-hover: #b5952f;
@@ -11,7 +9,7 @@
     --transicion-estandar: all 0.3s ease;
 }
 
-/* Tema Claro (Por defecto) */
+/* Tema Claro */
 :root[data-tema="claro"] {
     --color-fondo-principal: #f4f1ea;
     --color-fondo-superficie: #ffffff;
@@ -29,9 +27,7 @@
     --color-borde: #4a3821;
 }
 
-/* ==========================================================================
-   2. RESETEO MODERNO Y ESTILOS GLOBALES
-   ========================================================================== */
+/* RESETEO MODERNO Y ESTILOS GLOBALES */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -53,9 +49,7 @@ ul { list-style: none; }
 a { text-decoration: none; color: inherit; }
 img { display: block; max-width: 100%; }
 
-/* ==========================================================================
-   3. TIPOGRAFÍA Y BOTONES GENERALES
-   ========================================================================== */
+/* 3. TIPOGRAFÍA Y BOTONES GENERALES */
 h1, h2, h3 {
     font-family: var(--fuente-titulos);
     color: var(--color-primario);
@@ -90,8 +84,8 @@ h1, h2, h3 {
 /* Posicionamiento del botón de modo oscuro */
 .boton-tema {
     position: absolute;
-    right: 20px; /* Lo pega a la orilla derecha */
-    top: 20px;   /* Lo baja un poquito para que se alinee con el título */
+    right: 20px;
+    top: 20px; 
 }
 
 .boton--principal {
@@ -111,9 +105,7 @@ h1, h2, h3 {
     margin-top: 10px;
 }
 
-/* ==========================================================================
-   4. CABECERA Y NAVEGACIÓN
-   ========================================================================== */
+/* 4. CABECERA Y NAVEGACIÓN */
 .cabecera {
     background-color: var(--color-fondo-superficie);
     border-bottom: 1px solid var(--color-borde);
@@ -170,11 +162,9 @@ h1, h2, h3 {
     color: var(--color-primario); 
 }
 
-/* ==========================================================================
-   5. SECCIONES ESPECÍFICAS
-   ========================================================================== */
+/* SECCIONES ESPECÍFICAS */
 
-/* --- Portada --- */
+/* Portada */
 .portada { 
     min-height: 60vh; 
     display: flex; 
@@ -192,7 +182,7 @@ h1, h2, h3 {
     color: var(--color-texto-suave); 
 }
 
-/* --- Sobre Nosotros --- */
+/* Sobre Nosotros */
 .nosotros 
 
 .nosotros__cuadricula { 
@@ -229,7 +219,7 @@ h1, h2, h3 {
     max-width: 450px;
 }
 
-/* --- Equipo --- */
+/* Equipo */
 .equipo__filtros { 
     margin-bottom: 2rem; 
     display: flex; 
@@ -280,7 +270,7 @@ h1, h2, h3 {
     color: var(--color-texto-suave); 
 }
 
-/* --- Horarios --- */
+/* Horarios */
 .horarios__lista { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
@@ -345,7 +335,7 @@ h1, h2, h3 {
     list-style: disc; 
 }
 
-/* --- Pie de Página y Formulario --- */
+/* Pie de Página y Formulario */
 .pie-pagina { 
     background-color: var(--color-fondo-superficie); 
     border-top: 2px solid var(--color-primario); 
@@ -450,9 +440,7 @@ h1, h2, h3 {
     text-align: center; 
 }
 
-/* ==========================================================================
-   6. DISEÑO RESPONSIVO (MOVILES)
-   ========================================================================== */
+/* DISEÑO RESPONSIVO (PARA TELEFONO) */
 @media (max-width: 768px) {
     .portada__titulo { 
         font-size: 2.5rem; 

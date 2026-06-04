@@ -132,7 +132,7 @@ function iniciarValidacionFormulario() {
             limpiarError('nombre');
         }
 
-        // Validación de Correo (Simulada según requerimiento)
+        // Validación de Correo (Simulada)
         if (correo.length === 0) {
             mostrarError('correo', 'El correo no puede estar vacío.');
             esValido = false;
